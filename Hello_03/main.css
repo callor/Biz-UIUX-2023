@@ -24,7 +24,7 @@ body {
 } */
 
 header {
-  background-image: url("image_02.jpg");
+  background-image: url("images/image_02.jpg");
   /*
     background 를 이미지로 채울때
     가장 좋은 방법은 box 크기만큼의 이미지를 사용하는 것
@@ -79,6 +79,7 @@ main aside li {
   margin-top: 10px;
   cursor: pointer;
   transition: 0.7s;
+  text-align: right;
 }
 
 main aside li:hover {
@@ -88,4 +89,27 @@ main aside li:hover {
 main section {
   flex: 3;
   border: 1px solid green;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position: relative; */
+}
+
+main section article {
+  text-align: center;
+  color: white;
+
+  font-weight: 900;
+  font-size: 20px;
+
+  text-transform: uppercase;
+  line-height: 3rem;
+  letter-spacing: 0.5rem;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
