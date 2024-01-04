@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: aqua;
+        text-align: center;
+        padding: 1.2rem;
+      }
+
+      nav {
+        /*
+        position:stikey
+        css3 최신(?)에 추가된 속성
+        box 를 화면의 일정한 위치에 다다르면
+        스티커를 붙인 것처럼 고정시켜라
+        */
+        position: sticky;
+        top: -1px;
+        background-color: #777;
+        color: white;
+        display: flex;
+      }
+
+      nav ul {
+        list-style: none;
+        display: none;
+      }
+
+      nav li {
+        padding: 12px 16px;
+        margin: 0 5px;
+        /* box tag 에 text 를 wrap(접히기) 방지 */
+        white-space: nowrap;
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      section div {
+        width: 400px;
+        height: 100vh;
+        margin: 10px;
+        background-color: green;
+      }
+
+      nav div {
+        display: flex;
+        width: 30px;
+        flex-direction: column;
+        margin: 15px 30px;
+        justify-content: center;
+      }
+      nav span {
+        height: 3px;
+        margin: 5px 0;
+        background-color: red;
+      }
+
+      /* @media screen and (min-width: 500px) { */
+      @media (min-width: 500px) {
+        nav ul {
+          display: flex;
+        }
+        nav div {
+          display: none;
+        }
+        section div:nth-of-type(1) {
+          background-color: blue;
+          width: 45%;
+        }
+        section div:nth-of-type(2) {
+          background-color: blue;
+          width: 45%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>반응형 Web 화면</h1>
+    </header>
+    <nav>
+      <div><span></span><span></span><span></span></div>
+      <ul>
+        <li>Home</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>
