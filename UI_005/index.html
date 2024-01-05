@@ -8,13 +8,23 @@
     />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      li.main_nav {
+        color: yellow;
+      }
+
+      /* li.main_nav.home */
+      li.home {
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>몽이네집</h1>
       <p>몽이네집 홈페이지에 오신것을 환영합니다.</p>
     </header>
-    <nav>
+    <nav class="main_nav">
       <ul>
         <li class="main_nav home">Home</li>
         <li class="main_nav login">로그인</li>
@@ -28,11 +38,7 @@
           alt="인증사진"
           class="img_0001"
         />
-        <figcation
-          ><a href="./images/0001.jpg" target="_new"
-            >몽이인증</a
-          ></figcation
-        >
+        <figcation>몽이인증</figcation>
       </article>
       <article>
         <img src="./images/thums/600_0002.jpg" alt="스피츠" />
@@ -63,5 +69,6 @@
       <address>CopyRight &copy; callor@callor.com</address>
     </footer>
   </body>
-  <script src="./js/image.js"></script>
+  <script src="./js/image1.js"></script>
+  <script src="./js/nav4.js"></script>
 </html>
