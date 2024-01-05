@@ -3,7 +3,7 @@ const importHTML = (tag, file) => {
   xhr.open("GET", file, true);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      tag.innerHTML = xhr.responseText();
+      tag.innerHTML = xhr.responseText;
     }
   };
   xhr.send();
