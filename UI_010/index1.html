@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 10px;
+      }
+
+      /*
+      대표적인 inline tag button, input 등 몇몇은 
+      HTML5 에서 inline-block 의 성질을 갖는 tag 가 되었다
+      block : width, height 등이 적용되고, 보이는 공간과 실제 공간이 다르다
+      inline : width, height 등이 적용되지 않는 tag, 별도의 공간을 차지하지 않는다
+      inline-block : inline 과 block 의 성질을 동시에 갖는 tag
+        width, heigth 가 적용되고, 보이는 공간과 실제 차지하는 공간이 같다
+        tag를 여러개 나열하면 가로방향으로 기본 나열된다
+      */
+      button.btn {
+        display: block;
+        width: 300px;
+        height: 50px;
+        margin: 10px auto;
+        padding: 8px;
+        background-color: cadetblue;
+        color: #333;
+        transition: color 1s, width 0.5s ease-in-out, all 2s;
+      }
+
+      /* button.hover1 */
+      button.btn.hover1:hover {
+        color: #fff;
+        width: 500px;
+      }
+
+      button.btn.hover2:hover {
+        box-shadow: 300px 0 0 0 #e01313 inset;
+      }
+
+      button.btn.hover3:hover {
+        box-shadow: -300px 0 0 0 #e01313 inset;
+      }
+
+      button.btn.hover4:hover {
+        box-shadow: 0 50px 0 0 green inset;
+      }
+      button.btn.hover5:hover {
+        box-shadow: 0 50px 0 0 green inset, 0 -50px 0 0 green inset;
+      }
+      button.btn.hover6:hover {
+        box-shadow: 200px 0 0 0 green inset, -200px 0 0 0 green inset;
+      }
+      button.btn.hover7:hover {
+        width: 50px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼의 스타일</h1>
+    <button class="btn hover1">버튼 1</button>
+    <button class="btn hover2">버튼 2</button>
+    <button class="btn hover3">버튼 3</button>
+    <button class="btn hover4">버튼 4</button>
+    <button class="btn hover5">버튼 5</button>
+    <button class="btn hover6">버튼 6</button>
+    <button class="btn hover7">버튼 7</button>
+  </body>
+</html>
