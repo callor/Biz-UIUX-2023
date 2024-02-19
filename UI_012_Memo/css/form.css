@@ -1,0 +1,57 @@
+/*
+input tag 는 기본형이 inline-block
+input tag 를 flex box 로 감싸면
+성질이 flex-item 이 되어야 한다.
+input tag 가 1개만 있을때는 layout 구현에 문제가 없었다.
+input tag 가 2개 이상 다수가 나열될 경우
+flex-item 성질을 갖지 않는다. 여전히 inline-block 성징릉 유지한다
+
+속성중에 flex : 1 또는 flex : 100% 와 같은 성질이 적용이 안된다
+
+flex box(container) 에 다수의 input tag 를 같은 크기로 배치하려면
+width 값을 %로 지정해야 한다
+*/
+form.date {
+  display: flex;
+  /* 
+  flex container 에 gap 설정하기 
+  flex-item 들 간의 간격을 주기 위해 보통 margin 을 설정한다
+  margin 을 설정하면 좌우, 상하 끝에 margin 이 적용되어
+  전체적인 layout 이 다소 보기 싫은 현상이 타나 탄다
+  이때 flex container 에 gap 을 설정하면
+  flex-item 들 끼리만 마진이 주어지고 좌우, 상하에는 margin 이
+  적용되지 않아 layout 을 유지할수 있다
+  */
+  gap: 5px;
+  input {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+ul {
+  list-style: none;
+  li {
+    box-shadow: 2px 2px 2px 2px #ddd, 2px 2px 2px 2px #aaa;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 2.2rem;
+    img {
+      margin: 6px 5px -3px 5px;
+    }
+    &:hover {
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+}
+
+form.input {
+  display: flex;
+  flex-direction: column;
+  input {
+    width: 100%;
+    padding: 5px;
+    margin: 3px 0;
+  }
+}

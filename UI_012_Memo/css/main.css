@@ -1,0 +1,26 @@
+header {
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background-color: #6f8fe7;
+  color: white;
+  padding: 0.3rem;
+}
+
+section.main {
+  display: flex;
+}
+
+div.aside {
+  flex: 1;
+
+  padding: 1rem;
+  &:nth-of-type(1) {
+    border-right: 1px solid #ddd;
+  }
+}
