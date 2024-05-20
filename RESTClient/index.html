@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>나의 홈페이지</h1>
+    <ul class="list"></ul>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("http://localhost:8080/book/naver/books/java")
+        .then((res) => res.json())
+        .then((json) => {
+          for (item of json) {
+            const li = document.createElement("li");
+            li.innerText = item.title;
+            document.querySelector("ul.list").appendChild(li);
+          }
+        });
+    });
+  </script>
+</html>
